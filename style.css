@@ -1,0 +1,73 @@
+/* Responsive */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: calibri, arial, mono;
+  font-size: 2.2em;
+  background-color: #444444; 
+}
+
+#sidebar {
+  display: block;
+  float: left;
+  width: 30%;
+  font-size: smaller;  
+}
+
+#current_date,
+#current_day,
+#current_time_now {
+  text-align: center;
+}
+
+#current_time {
+  background-color: #0076a3;
+  margin: 10px;
+  padding: 20px;
+}
+
+#current_time h2 { 
+  margin-top: 0px;
+  font-weight: 300;
+}
+
+#current_time_now {
+  font-size: 1.7em;
+  font-weight: 100;
+  text-align: center;
+}
+
+#rpi_temp {
+  background-color: #de363c;
+  margin: 20px 10px;
+  padding: 20px;
+}
+
+#current_time, #rpi_temp, p {
+  color:white;
+}
+
+#buttons {
+  display: inline-block;
+  width: 70%;
+}
+
+.button {
+  display: inline-block;
+  width: 30%;
+  font-size: 0.7em;
+  margin: 10px;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  #sidebar, 
+  #buttons { width: 100%; }
+  .button { 
+    width: 100%; 
+    margin: 10px 0;
+    font-size: 1em;
+  }
+}
