@@ -18,6 +18,10 @@
         $temp = substr(shell_exec($check_temp), 5);
         echo ("<div id='rpi_temp'>RPi Temperature<div>$temp</div></div>");
       ?>
+      <?php
+        $url = $_SERVER['SERVER_ADDR'];# + ":8081";
+        echo ("<iframe src='http://$url:8081' scrolling='no' frameborder='0'></iframe>");
+      ?>
     </div>
 
     <div id="buttons">
@@ -52,6 +56,7 @@
           ");
         }
       }
+      echo ("<div class='button' id='button_8' onClick='change_pin(8)'><p>Reset</p><p>Relay</p></div>");
     ?>
     </div>
 

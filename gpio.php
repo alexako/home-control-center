@@ -42,14 +42,9 @@ if (isset ( $_GET["pin"] )) {
 		exec ("gpio read ".$pin, $status, $return );
 
 		//set the gpio to high/low
-		if ($status[0] == "0") {
-			$status[0] = "1";
-		}
-		else { 
-			$status[0] = "0"; 
-		}
+		if ($status[0] == "0") { $status[0] = "1"; }
+		else { $status[0] = "0"; }
 		system("gpio write $pin $status[0]");
-
 
 		exec ("gpio read ".$pin, $status, $return );
 		//print it to the client on the response

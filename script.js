@@ -9,9 +9,10 @@ var button_7 = document.getElementById("button_7");
 
 //Create an array for easy access later
 var Buttons = [ button_0, button_1, button_2, button_3, button_4, button_5, button_6, button_7 ];
-var Channels = [ 15, 16, 1, 4, 5, 6, 10, 11 ];
+var Channels = [ 15, 16, 1, 4, 5, 6, 10, 11, ];
 
-//This function is utilizes gpio.php for receiving data and updating the index.php
+
+//This function is utilizes gpio.php for receiving data and updating the index.php file
 function change_pin ( pin ) {
   var data = 0;
   var request = new XMLHttpRequest();
@@ -25,7 +26,7 @@ function change_pin ( pin ) {
     if (request.readyState == 4 && request.status == 200) {
       data = request.responseText;
       //Update the index pin
-      if ( !(data.localeCompare("1")) ){
+      if ( !(data.localeCompare("1")) ) {
         Buttons[pin].style.backgroundColor = "#ed3038";
         Buttons[pin].children[1].innerHTML = "is off";
       }

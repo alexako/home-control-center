@@ -5,7 +5,11 @@ function startTime() {
   var t = setTimeout(function(){startTime()},500);
   var month = months[date.getMonth()];
   var day = dayOfWeek[date.getDay()];
-  var hour = date.getHours();
+
+  //Format hours if it's 12am
+  var hour;
+  if (date.getHours() < 1) { hour = "0" + date.getHours(); }
+  else { hour = date.getHours(); }
 
   //Format minutes if less than 10
   var minute;
