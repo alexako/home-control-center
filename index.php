@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>RPi Controller</title>
-  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
   <body onload="startTime()">
@@ -60,7 +60,7 @@
     ?>
     </div>
 
-    <script src="script.js"></script>
-    <script src="date_time.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/date_time.js"></script>
   </body>
 </html>
