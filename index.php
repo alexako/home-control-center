@@ -49,7 +49,9 @@
             $switch_color = array("#197b30", "#ed3038");
 
             for ($i=0; $i<8; $i++) {
-              $c_status = 1;# shell_exec("gpio read $channels[$i]");
+              $c_status = shell_exec("gpio read $channels[$i]");
+              if ($c_status == 0) { $c_status = 0; }
+              else { $c_status = 1; }
               #echo row
               if ($i % 3 == 0) { echo ("<div class='row'>"); }
               echo ("
